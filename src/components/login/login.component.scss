@@ -1,0 +1,40 @@
+table {
+  width: 100%;
+}
+
+.mat-card-avatar {
+  height: 75px;
+  margin-top: 10px;
+}
+.example-header-image {
+  img {
+    width: 60px;
+    border-radius: 50%;
+  }
+}
+
+.example-card {
+  max-width: 300px;
+}
+
+.btn {
+  background-color: lightcoral;
+  border: 0;
+  padding: 10px 30px;
+  color: white;
+  border-radius: 5px;
+  margin: 5px;
+}
+
+.select {
+  display: flex;
+  justify-content: flex-end;
+  margin: 10px;
+}
+
+.flex {
+  display: flex;
+  justify-content: space-evenly;
+  width: 80%;
+  margin-top: 10px;
+}

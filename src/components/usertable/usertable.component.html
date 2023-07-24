@@ -1,0 +1,70 @@
+<div style='display: flex;'>
+  <div style="width: 80%">
+    <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+      <!-- Position Column -->
+      <ng-container matColumnDef="id">
+        <th mat-header-cell *matHeaderCellDef>ID.</th>
+        <td mat-cell *matCellDef="let element">{{ element.id }}</td>
+      </ng-container>
+
+      <!-- Name Column -->
+      <ng-container matColumnDef="first_name">
+        <th mat-header-cell *matHeaderCellDef>First Name</th>
+        <td mat-cell *matCellDef="let element">{{ element.first_name }}</td>
+      </ng-container>
+
+      <!-- Weight Column -->
+      <ng-container matColumnDef="last_name">
+        <th mat-header-cell *matHeaderCellDef>Last name</th>
+        <td mat-cell *matCellDef="let element">{{ element.last_name }}</td>
+      </ng-container>
+
+      <!-- Symbol Column -->
+      <ng-container matColumnDef="email">
+        <th mat-header-cell *matHeaderCellDef>Email</th>
+        <td mat-cell *matCellDef="let element">{{ element.email }}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="avatar">
+        <th mat-header-cell *matHeaderCellDef>Avatar</th>
+        <td mat-cell *matCellDef="let element">
+          <div mat-card-avatar class="example-header-image">
+            <img [src]="element.avatar" />
+          </div>
+        </td>
+      </ng-container>
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+          <mat-spinner ></mat-spinner>
+    </table>
+
+    <mat-paginator
+      class="mat-elevation-z8"
+      [length]="resultsLength"
+      [pageIndex]="currentPage"
+      #paginator
+      [pageSizeOptions]="[5, 10, 25, 100]"
+      aria-label="Select page of users"
+    ></mat-paginator>
+  </div>
+
+  <div style="width: 20%; padding: 0 20px">
+    <mat-card class="mat-elevation-z8">
+      <mat-card-title>Phrase Result</mat-card-title>
+      <mat-list role="list">
+        <mat-list-item role="listitem">Phrase #1 Result</mat-list-item>
+        <mat-list-item role="listitem">Phrase #2 Result</mat-list-item>
+        <mat-list-item role="listitem">Phrase #3 Result</mat-list-item>
+      </mat-list>
+    </mat-card>
+
+    <mat-card class="mat-elevation-z8" style='margin-top: 20px; text-align: center'>
+
+      <div style='display:flex; justify-content:center; margin-bottom: 50px'>
+         <mat-spinner></mat-spinner>
+      </div>
+      <mat-card-title>Current Progress</mat-card-title>
+      <p>lorem ipsum dolor sit amet, con</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos sed enim placeat nostrum reprehenderit.</p>
+    </mat-card>
+  </div>
